@@ -1,10 +1,13 @@
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all functionality
-    initMobileMenu();
-    initScrollAnimations();
-    initSmoothScrolling();
-    initHeaderEffects();
+    // Load header and footer first, then initialize functionality
+    loadHeader().then(() => {
+        initMobileMenu();
+        initScrollAnimations();
+        initSmoothScrolling();
+        initHeaderEffects();
+    });
+    loadFooter();
 });
 
 // Mobile Menu Functionality
@@ -184,6 +187,87 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Load Header Function
+function loadHeader() {
+    return new Promise((resolve, reject) => {
+        const headerContainer = document.querySelector('#header-container');
+        if (headerContainer) {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                    resolve();
+                })
+                .catch(error => {
+                    console.error('Error loading header:', error);
+                    // Fallback header if loading fails
+                    headerContainer.innerHTML = `
+                        <header>
+                            <div class="container">
+                                <div class="header-content">
+                                    <a href="index.html" class="logo">Ada Software</a>
+                                    <nav>
+                                        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+                                        <ul id="nav-menu">
+                                            <li><a href="index.html#productos">Productos</a></li>
+                                            <li><a href="index.html#about">Nosotros</a></li>
+                                            <li><a href="index.html#servicios">Servicios</a></li>
+                                            <li><a href="index.html#contact">Contacto</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </header>
+                    `;
+                    resolve();
+                });
+        } else {
+            resolve();
+        }
+    });
+}
+
+// Load Footer Function
+function loadFooter() {
+    const footerContainer = document.querySelector('#footer-container');
+    if (footerContainer) {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                footerContainer.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer if loading fails
+                footerContainer.innerHTML = `
+                    <footer>
+                        <div class="container">
+                            <div class="footer-content">
+                                <div class="footer-section">
+                                    <h4>Ada Software</h4>
+                                    <p>Soluciones tecnológicas especializadas que transforman la gestión bursátil y educativa.</p>
+                                </div>
+                                <div class="footer-section">
+                                    <h4>Productos</h4>
+                                    <a href="adabolsa.html">AdaBolsa</a>
+                                    <a href="adacolegios.html">AdaColegios</a>
+                                </div>
+                                <div class="footer-section">
+                                    <h4>Contacto</h4>
+                                    <p>CABA, Argentina</p>
+                                    <p>info@adasoftware.com.ar</p>
+                                </div>
+                            </div>
+                            <div class="footer-bottom">
+                                <p>&copy; 2024 Ada Software. Todos los derechos reservados.</p>
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            });
+    }
+}
 
 // Console log for debugging
 console.log('Ada Software - JavaScript loaded successfully');

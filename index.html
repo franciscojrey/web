@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ada Software - Soluciones Tecnológicas</title>
+    <link rel="icon" type="image/x-icon" href="logo_titulo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
     </header>
     
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero principal">
         <div class="container">
             <div class="hero-content fade-in">
                 <h1>Precisión y experiencia<br>en desarrollo de Software</h1>
@@ -76,41 +77,99 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Support & Services Section -->
+    <section id="servicios" class="support-services">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Ada Software</h4>
-                    <p>Soluciones tecnológicas especializadas que transforman la gestión empresarial y educativa.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Productos</h4>
-                    <a href="adabolsa.html">AdaBolsa</a>
-                    <a href="adacolegios.html">AdaColegios</a>
-                    <a href="#servicios">Soporte Técnico</a>
-                    <a href="#servicios">Implementación</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Empresa</h4>
-                    <a href="#about">Nosotros</a>
-                    <a href="#team">Equipo</a>
-                    <a href="#careers">Carreras</a>
-                    <a href="#contact">Contacto</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p>Buenos Aires, Argentina</p>
-                    <p>+54 11 1234-5678</p>
-                    <p>info@adasoftware.com</p>
-                    <p>soporte@adasoftware.com</p>
-                </div>
+            <div class="section-header fade-in">
+                <h2>Soporte y Servicios</h2>
+                <p>Ofrecemos un servicio integral que va más allá del software, acompañándote en cada paso de tu transformación digital.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Ada Software. Todos los derechos reservados.</p>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <h3>Implementación y Configuración</h3>
+                    <p>Proceso de implementación guiado por expertos, configuración personalizada según tus necesidades específicas y migración de datos existentes.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Capacitación y Entrenamiento</h3>
+                    <p>Sesiones de capacitación para tu equipo, manuales de usuario detallados y soporte continuo para maximizar el aprovechamiento del sistema.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Soporte Técnico 24/7</h3>
+                    <p>Equipo de soporte técnico disponible las 24 horas, 7 días a la semana, con respuesta rápida y resolución efectiva de cualquier consulta.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Mantenimiento y Actualizaciones</h3>
+                    <p>Mantenimiento preventivo regular, actualizaciones de seguridad, nuevas funcionalidades y optimizaciones de rendimiento continuas.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Desarrollo Personalizado</h3>
+                    <p>Desarrollo de módulos específicos, integraciones con sistemas existentes y adaptaciones según los requerimientos únicos de tu negocio.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <h3>Consultoría y Optimización</h3>
+                    <p>Análisis de procesos actuales, recomendaciones de mejora y estrategias para maximizar el ROI de tu inversión en tecnología.</p>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Contáctanos</h2>
+                <p>¿Listo para transformar tu negocio? Solicita una consulta gratuita y descubre cómo nuestras soluciones pueden optimizar tus procesos.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info slide-in-left">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>CABA, Argentina</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@adasoftware.com.ar</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4>Horarios</h4>
+                                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                                <p>Soporte 24/7 disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form slide-in-right">
+                    <form class="contact-form-element">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Cuéntanos sobre tu proyecto o consulta" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Consulta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
 
     <script src="main.js"></script>
 </body>
