@@ -9,28 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <img src="logo_titulo.png" alt="Ada Software Logo" class="logo-img">
-                    <span>Ada Software</span>
-                </a>
-                <nav>
-                    <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-                    <ul id="nav-menu">
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#about">Nosotros</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <!-- Header Container -->
+    <div id="header-container"></div>
     
     <!-- Hero Section -->
     <section class="hero principal">
@@ -70,7 +53,7 @@
             <div class="about-content">
                 <div class="about-text slide-in-left">
                     <h2>Innovación tecnológica</h2>
-                    <p>En Ada Software, desarrollamos soluciones tecnológicas especializadas que transforman la manera en que las empresas operan. Nuestro enfoque combina experiencia técnica con un profundo entendimiento de las necesidades específicas de cada industria.</p>
+                    <p>Innovamos constantemente para ofrecer soluciones tecnológicas que optimizan los procesos y mejoran la competitividad de las organizaciones, entendiendo las particularidades de cada industria.</p>
                     <p>Creemos que la tecnología debe ser una herramienta que potencie el crecimiento y la eficiencia. Por eso, cada producto está diseñado pensando en las necesidades reales de nuestros clientes y en la optimización de sus procesos.</p>
                 </div>
                 <div class="about-image slide-in-right">
@@ -89,27 +72,27 @@
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <h3>Implementación y Configuración</h3>
+                    <h3>Implementación</h3>
                     <p>Proceso de implementación guiado por expertos, configuración personalizada según tus necesidades específicas y migración de datos existentes.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <h3>Capacitación y Entrenamiento</h3>
+                    <h3>Capacitación</h3>
                     <p>Sesiones de capacitación para tu equipo, manuales de usuario detallados y soporte continuo para maximizar el aprovechamiento del sistema.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <h3>Soporte Técnico 24/7</h3>
-                    <p>Equipo de soporte técnico disponible las 24 horas, 7 días a la semana, con respuesta rápida y resolución efectiva de cualquier consulta.</p>
+                    <h3>Soporte</h3>
+                    <p>Equipo de soporte técnico disponible durante toda la jornada laboral, con respuesta rápida y resolución efectiva de cualquier consulta.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <h3>Mantenimiento y Actualizaciones</h3>
+                    <h3>Mantenimiento</h3>
                     <p>Mantenimiento preventivo regular, actualizaciones de seguridad, nuevas funcionalidades y optimizaciones de rendimiento continuas.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <h3>Desarrollo Personalizado</h3>
+                    <h3>Desarrollo personalizado</h3>
                     <p>Desarrollo de módulos específicos, integraciones con sistemas existentes y adaptaciones según los requerimientos únicos de tu negocio.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <h3>Consultoría y Optimización</h3>
+                    <h3>Optimización</h3>
                     <p>Análisis de procesos actuales, recomendaciones de mejora y estrategias para maximizar el ROI de tu inversión en tecnología.</p>
                 </div>
             </div>
@@ -121,28 +104,28 @@
         <div class="container">
             <div class="section-header fade-in">
                 <h2>Contactenos</h2>
-                <p>¿Listo para transformar tu negocio? Solicita una consulta gratuita y descubrí cómo nuestras soluciones pueden optimizar tus procesos.</p>
+                <p>Descubrí cómo la tecnología puede transformar tu gestión. Solicitá una consulta gratuita y recibí asesoramiento personalizado.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info slide-in-left">
                     <h3>Información de contacto</h3>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <div class="contact-icon">📍</div>
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
                                 <h4>Ubicación</h4>
                                 <p>CABA, Argentina</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <h4>Email</h4>
                                 <p>info@adasoftware.com.ar</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">🕒</div>
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
                             <div>
                                 <h4>Horarios</h4>
                                 <p>Lunes a Viernes: 9:00 - 18:00</p>
