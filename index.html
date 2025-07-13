@@ -15,7 +15,10 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">Ada Software</a>
+                <a href="#" class="logo">
+                    <img src="logo_titulo.png" alt="Ada Software Logo" class="logo-img">
+                    <span>Ada Software</span>
+                </a>
                 <nav>
                     <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
                     <ul id="nav-menu">
@@ -43,7 +46,7 @@
     <section id="productos" class="services">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Nuestros Productos</h2>
+                <h2>Nuestros productos</h2>
                 <p>Plataformas especializadas diseñadas para optimizar y transformar la gestión de tu negocio.</p>
             </div>
             <div class="services-grid">
@@ -66,7 +69,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text slide-in-left">
-                    <h2>Innovación Tecnológica</h2>
+                    <h2>Innovación tecnológica</h2>
                     <p>En Ada Software, desarrollamos soluciones tecnológicas especializadas que transforman la manera en que las empresas operan. Nuestro enfoque combina experiencia técnica con un profundo entendimiento de las necesidades específicas de cada industria.</p>
                     <p>Creemos que la tecnología debe ser una herramienta que potencie el crecimiento y la eficiencia. Por eso, cada producto está diseñado pensando en las necesidades reales de nuestros clientes y en la optimización de sus procesos.</p>
                 </div>
@@ -81,7 +84,7 @@
     <section id="servicios" class="support-services">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Soporte y Servicios</h2>
+                <h2>Servicios</h2>
                 <p>Ofrecemos un servicio integral que va más allá del software, acompañándote en cada paso de tu transformación digital.</p>
             </div>
             <div class="services-grid">
@@ -117,12 +120,12 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Contáctanos</h2>
-                <p>¿Listo para transformar tu negocio? Solicita una consulta gratuita y descubre cómo nuestras soluciones pueden optimizar tus procesos.</p>
+                <h2>Contactenos</h2>
+                <p>¿Listo para transformar tu negocio? Solicita una consulta gratuita y descubrí cómo nuestras soluciones pueden optimizar tus procesos.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info slide-in-left">
-                    <h3>Información de Contacto</h3>
+                    <h3>Información de contacto</h3>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">📍</div>
@@ -149,20 +152,26 @@
                     </div>
                 </div>
                 <div class="contact-form slide-in-right">
-                    <form class="contact-form-element">
+                    <form class="contact-form-element" id="contact-form" action="https://formspree.io/f/mblkrlyb" method="POST">
                         <div class="form-row">
                             <div class="form-group">
-                                <input type="text" placeholder="Nombre completo" required>
+                                <input type="text" name="nombre" placeholder="Nombre completo" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Cuéntanos sobre tu proyecto o consulta" rows="5"></textarea>
+                            <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto o consulta" rows="5"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary">Enviar Consulta</button>
+                        <button type="submit" class="btn-primary">Enviar consulta</button>
                     </form>
+                    
+                    <!-- Success Message -->
+                    <div id="success-message" class="success-message" style="display: none;">
+                        <h3>¡Mensaje enviado!</h3>
+                        <p>Gracias por contactarnos. Nos pondremos en contacto contigo pronto.</p>
+                    </div>
                 </div>
             </div>
         </div>

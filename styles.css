@@ -57,6 +57,15 @@ header {
     font-weight: 600;
     color: var(--clr-principal);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Mobile navigation */
@@ -130,7 +139,8 @@ nav a:hover {
 }
 
 .hero.principal {
-    background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(120, 53, 15, 0.6)), url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80');
+    /*background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(120, 53, 15, 0.6)), url('fondo.jpg');*/
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fondo.jpg');
 }
 
 .hero-content {
@@ -365,7 +375,6 @@ nav a:hover {
 /* Support & Services Section */
 .support-services {
     padding: 4rem 0;
-    background: #f8f9fa;
 }
 
 .support-services .services-grid {
@@ -394,7 +403,7 @@ nav a:hover {
 /* Contact Section - Mobile First */
 .contact-section {
     padding: 3rem 0;
-    background: white;
+    background: #f8f9fa;
 }
 
 .contact-content {
@@ -428,7 +437,7 @@ nav a:hover {
     align-items: center;
     gap: 0.75rem;
     padding: 1rem;
-    background: #f8f9fa;
+    background: white;
     border-radius: 8px;
     border: 1px solid #e9ecef;
 }
@@ -462,7 +471,7 @@ nav a:hover {
 
 .contact-form {
     order: 1;
-    background: #f8f9fa;
+    background: white;
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid #e9ecef;
@@ -529,6 +538,66 @@ nav a:hover {
     font-weight: 600;
     text-align: center;
     border-radius: 8px;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.success-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: bounceIn 0.8s ease-out;
+}
+
+.success-message h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--clr-principal);
+}
+
+.success-message p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Footer */
@@ -717,6 +786,11 @@ footer {
 
     .logo {
         font-size: 1.8rem;
+        gap: 1rem;
+    }
+
+    .logo-img {
+        height: 45px;
     }
 
     nav ul {

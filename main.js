@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initHeaderEffects();
     });
     loadFooter();
+    initContactForm();
 });
 
 // Mobile Menu Functionality
@@ -269,5 +270,54 @@ function loadFooter() {
     }
 }
 
-// Console log for debugging
-console.log('Ada Software - JavaScript loaded successfully');
+// Contact Form Handling
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Enviando...';
+            submitButton.disabled = true;
+            
+            // Submit to Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showSuccessMessage();
+                } else {
+                    throw new Error('Error en el envío');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
+        });
+    }
+}
+
+// Show success message
+function showSuccessMessage() {
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+    
+    if (form && successMessage) {
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
+    }
+}
