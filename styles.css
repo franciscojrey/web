@@ -6,7 +6,7 @@
 }
 
 :root {
-    --clr-principal: #1c278a;
+    --clr-principal: #1e2880;
 }
 
 body {
@@ -139,8 +139,7 @@ nav a:hover {
 }
 
 .hero.principal {
-    /*background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(120, 53, 15, 0.6)), url('fondo.jpg');*/
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('fondo.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/fondo.jpg');
 }
 
 .hero-content {
@@ -342,7 +341,7 @@ nav a:hover {
 }
 
 .about-image {
-    background: linear-gradient(rgba(30, 58, 138, 0.3), rgba(120, 53, 15, 0.3)), url('computadora.jpg');
+    background: linear-gradient(rgba(30, 58, 138, 0.3), rgba(120, 53, 15, 0.3)), url('images/computadora.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -384,7 +383,6 @@ nav a:hover {
 
 .support-services .service-card {
     background: white;
-    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
@@ -438,7 +436,6 @@ nav a:hover {
     gap: 0.75rem;
     padding: 1rem;
     background: white;
-    border-radius: 8px;
     border: 1px solid #e9ecef;
 }
 
@@ -473,7 +470,6 @@ nav a:hover {
     order: 1;
     background: white;
     padding: 1.5rem;
-    border-radius: 12px;
     border: 1px solid #e9ecef;
 }
 
@@ -508,7 +504,6 @@ nav a:hover {
 .form-group textarea {
     padding: 0.875rem 1rem;
     border: 1px solid #e9ecef;
-    border-radius: 8px;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
@@ -537,7 +532,6 @@ nav a:hover {
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
-    border-radius: 8px;
 }
 
 /* Success Message */
@@ -545,7 +539,6 @@ nav a:hover {
     text-align: center;
     padding: 2rem;
     background: #f8f9fa;
-    border-radius: 12px;
     border: 1px solid #e9ecef;
     animation: fadeInUp 0.6s ease-out;
 }
@@ -645,11 +638,12 @@ footer {
 /* Product Page Specific Styles */
 
 .hero.bolsa {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bolsa2.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/velero.jpg');
+    background-position: center;
 }
 
 .hero.education {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('colegio.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/colegio.jpg');
 }
 
 .features-section {
@@ -667,7 +661,6 @@ footer {
 .feature-card {
     padding: 2.5rem;
     border: 1px solid #e9ecef;
-    border-radius: 12px;
     background: white;
     transition: all 0.3s ease;
     position: relative;
@@ -866,6 +859,10 @@ footer {
     .btn-secondary {
         width: auto;
         max-width: none;
+    }
+
+    .btn-submit {
+        cursor: pointer;
     }
 
     /* Services Desktop */
