@@ -47,6 +47,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    height: 80px;
 }
 
 .logo {
@@ -393,6 +394,10 @@ nav a:hover {
 }
 
 /* Contact Section - Mobile First */
+#anchor-contact {
+    height:80px;
+}
+
 .contact-section {
     padding: 3rem 0;
     background: #f8f9fa;
@@ -770,6 +775,7 @@ footer {
     /* Header Desktop */
     .header-content {
         padding: 1.5rem 0;
+        height: 95px;
     }
 
     .logo {
@@ -876,6 +882,11 @@ footer {
     }
 
     /* Contact Section Desktop */
+
+    #anchor-contact {
+        height:95px;
+    }
+
     .contact-section {
         padding: 6rem 0;
     }
@@ -1057,4 +1068,9 @@ footer {
 .slide-in-right.visible {
     opacity: 1;
     transform: translateX(0);
+}
+
+.contact-form .btn-submit {
+    display: block;
+    margin: 1em auto 0 auto;
 }
