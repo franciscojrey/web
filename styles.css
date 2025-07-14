@@ -200,8 +200,8 @@ nav a:hover {
 }
 
 .btn-secondary:hover {
-    background: var(--clr-principal);
-    color: white;
+    background: white;
+    color: var(--clr-principal);
 }
 
 /* Services Section */
@@ -306,10 +306,6 @@ nav a:hover {
     z-index: 10;
     text-decoration: none;
     transition: all 0.3s ease;
-}
-
-.service-card a:hover {
-    transform: translateY(-2px);
 }
 
 /* About Section */
